@@ -1,0 +1,151 @@
+body {
+    text-align: center;
+    font-family: 'Prompt';
+    color: #333;
+}   
+
+/*p {
+	border-bottom: 1px solid #5169d5; 
+	border-top: 1px solid #5169d5;
+}*/
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+}
+
+canvas {
+	margin-top: -40px;
+	/*padding-top: -20px;*/
+}
+
+h2 {
+	color: #5d5b69;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+ul { 
+	border: 1px solid #ccc; 
+    border-radius: 8px;
+    padding: 7px;
+} 
+
+.arrows i {
+	color: #5169d5;
+	padding: 2px 3px;
+	border: 1px solid #5169d5; 
+    border-radius: 2px;
+}
+
+.arrows ul {
+	list-style: none;
+}
+
+.arrows li {
+	display: inline;
+	padding: 0 20px 0 0;
+}
+.arrows li:last-child { 
+	padding: 0;
+}
+/*
+ * Styles for the Modal
+*/
+
+.hide {
+	display: none;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    position: relative;
+    top: 40%;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #5d5b69;
+    border-radius: 8px;
+    width: 30%; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    text-align: center;  
+} 
+
+
+.modal-header {
+    padding: 2px 16px;
+    background: linear-gradient(160deg, #82d465 0%, #5169d5 100%);
+    color: white; 
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+.playAgain { 
+    background: linear-gradient(160deg, #5169d5 0%, #5ec248 100%);
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    padding: 7px 20px; 
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
+.playAgain:hover,
+.playAgain:focus
+ {  
+    background: #82d465;
+}
+
+@media screen and (max-width: 520px) {
+    canvas {
+        width: 355px;
+        min-height: 356px;
+        padding: 0px 5px 5px 5px;
+        margin: none;
+    }
+
+    .modal-content { 
+        width:85%;
+    }
+
+    body {
+    	font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    canvas {
+        width: 305px;
+        min-height: 306px;
+        padding: 0px;
+        margin: none;
+    }
+
+    .modal-content { 
+        width:85%;
+    }
+
+    body {
+    	font-size: 13px;
+    }
+}
