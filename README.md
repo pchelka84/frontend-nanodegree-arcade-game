@@ -18,6 +18,6 @@ If a collision with bugs occurs, the game restarts.
 
 - [Font Awesome](https://fontawesome.com/)
 - [Google Fonts](https://fonts.google.com/)
-- Special Thanks to Rodrick Bloomfield for a [tutuorial]: (https://zoom.us/recording/play/aulotDlzKFegQFIJTaTzKgWvNkVsYtlwO454vL1UPE1Cm6lOUBQCtfVurPOIAGAS?startTime=1529542978000)
+- Special Thanks to Rodrick Bloomfield for a [tutuorial](https://zoom.us/recording/play/aulotDlzKFegQFIJTaTzKgWvNkVsYtlwO454vL1UPE1Cm6lOUBQCtfVurPOIAGAS?startTime=1529542978000)
 
 
