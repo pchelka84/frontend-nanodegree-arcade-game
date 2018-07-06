@@ -6,6 +6,8 @@ This arcade game is the third project for Udacity's Front-End Web Developer Nano
 
 To install the game, clone or download a local copy of the game. To play, simply open index.html from any web browser.
 
+As an alternative, the game the game can be played on the live version: [Frogger](https://pchelka84.github.io/frontend-nanodegree-arcade-game/)
+
 Player must avoid bugs and get from the starting point to the water. 
 
 ## How to Play the Game
