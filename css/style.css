@@ -121,7 +121,7 @@ ul {
         width: 355px;
         min-height: 356px;
         padding: 0px 5px 5px 5px;
-        margin: none;
+        margin: 0px;
     }
 
     .modal-content { 
@@ -138,7 +138,7 @@ ul {
         width: 305px;
         min-height: 306px;
         padding: 0px;
-        margin: none;
+        margin: 0px;
     }
 
     .modal-content { 

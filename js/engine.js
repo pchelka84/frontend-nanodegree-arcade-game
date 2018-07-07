@@ -1,3 +1,4 @@
+"use strict";
 /* Engine.js
  * This file provides the game loop functionality (update entities and render),
  * draws the initial game board on the screen, and then calls the update and
@@ -56,17 +57,23 @@ var Engine = (function(global) {
         /* Use the browser's requestAnimationFrame function to call this
          * function again as soon as the browser is able to draw another frame.
          */
-        animation = win.requestAnimationFrame(main);
+        animation = win.requestAnimationFrame(main); 
+        checkWin();
+        // Stop animation if player reached water 
+        // if (win()) {
+        //     modalWin(); 
+        // }  
+    }
 
-        // Stop animation if player reached water
-        if (player.y < 1) {
-            modalWin(); 
-            win.cancelAnimationFrame(animation);
+    function checkWin() {
+        if (player.checkWin()) {
+            win.cancelAnimationFrame(animation); 
+            modalWin();
         }
     }
 
     function modalWin() { 
-         setTimeout(function modalShow() {
+        setTimeout(function modalShow() {
            modal.classList.toggle('hide');;
         }, 200);  
         // window.onclick = function(event) {
@@ -75,7 +82,7 @@ var Engine = (function(global) {
         //     }
         // }
     }
-
+    
     playAgain.addEventListener('click', function(evt) {
         init();
     });
@@ -87,7 +94,7 @@ var Engine = (function(global) {
     function init() {
         reset();
         lastTime = Date.now();
-        main();
+        main(); 
     }
 
     /* This function is called by main (our game loop) and itself calls all
@@ -107,7 +114,7 @@ var Engine = (function(global) {
 
     function checkCollisions() {
         allEnemies.forEach(enemy => {
-            if (enemy.checkCollisions(player) || player.checkCollisions(enemy)) {
+            if (enemy.checkCollisions(player)) {
                 reset();
             }
         });

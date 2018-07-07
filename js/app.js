@@ -1,5 +1,8 @@
+"use strict";
+
 let modal = document.querySelector('#modal');
 let playAgain = document.querySelector('.playAgain'); 
+
 
 class Entity {
     constructor() {
@@ -13,7 +16,7 @@ class Entity {
 
     checkCollisions(character) {
         if (this.y === character.y) {
-            if (this.x >= character.x - 0.9 && this.x <= character.x + 0.9) {
+            if (this.x >= character.x - 0.5 && this.x <= character.x + 0.5) {
                 return true;
             }
         }
@@ -31,8 +34,7 @@ class Player extends Entity {
     constructor() {
         super();
         this.sprite += 'char-boy.png'
-        this.moving = false;
-        this.win = false;
+        // this.win = false; check if you need it
         this.x = 2;
         this.y = 5;
     }
@@ -54,13 +56,20 @@ class Player extends Entity {
             default:
                 break;
         }
-        this.moving = true;
     }
 
-    // When image re-renders player isn't moving
     render() {
         super.render();
-        this.moving = false;
+    }
+
+    checkWin() { 
+        // Check if player reached the water              
+        if (this.y < 1) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }
 
