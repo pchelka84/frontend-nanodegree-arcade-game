@@ -34,7 +34,6 @@ class Player extends Entity {
     constructor() {
         super();
         this.sprite += 'char-boy.png'
-        // this.win = false; check if you need it
         this.x = 2;
         this.y = 5;
     }
@@ -62,8 +61,8 @@ class Player extends Entity {
         super.render();
     }
 
-    checkWin() { 
-        // Check if player reached the water              
+    // Check if player reached the water   
+    checkWin() {            
         if (this.y < 1) {
             return true;
         }

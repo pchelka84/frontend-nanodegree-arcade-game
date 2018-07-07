@@ -59,10 +59,6 @@ var Engine = (function(global) {
          */
         animation = win.requestAnimationFrame(main); 
         checkWin();
-        // Stop animation if player reached water 
-        // if (win()) {
-        //     modalWin(); 
-        // }  
     }
 
     function checkWin() {
